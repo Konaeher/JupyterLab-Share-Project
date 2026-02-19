@@ -1,0 +1,11 @@
+hub:
+  extraVolumes:
+    - name: config-volume
+      persistentVolumeClaim:
+        claimName: jupyterhub-config-pvc
+  extraVolumeMounts:
+    - name: config-volume
+      mountPath: /srv/jupyterhub
+
+proxy:
+  secretToken: "VrTu1NTQhbmBVXQ27NyzZgnUFE5m3vOOQirM/NrweHs="
